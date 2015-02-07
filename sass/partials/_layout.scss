@@ -1,0 +1,78 @@
+@import '_base';
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: $main-bg;
+  font-family: tf2secondary, sans-serif;
+  color: $text-color;
+}
+
+.tf-container {
+  @include clearfix();
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.tf-container-body {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+}
+
+.site-header {
+  background: $header-bg;
+  border: 1px solid $header-border;
+  padding: 10px 0 5px;
+}
+
+.site-heading {
+  text-align: center;
+  font-size: 48px;
+  margin: 0;
+  color: $rxg-red;
+}
+
+.tf-navigation {
+  float: left;
+  padding: 10px;
+
+  @include box-sizing(border-box);
+  width: 35%;
+
+  background: $nav-bg;
+  border: solid $nav-border;
+  border-width: 0 1px;
+
+  flex-grow: 1;
+}
+
+.tf-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @include box-sizing(border-box);
+  width: 65%;
+  margin-left: 10px;
+}
+
+.tf-content-heading {
+  background: $content-heading-bg;
+  padding: 5px 5px 3px 5px;
+  margin: 0 0 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.tf-content-body {
+  float: right;
+  flex-grow: 1;
+  //  overflow-y: scroll;
+}

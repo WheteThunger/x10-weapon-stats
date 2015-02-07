@@ -270,7 +270,225 @@ th {
   padding: 0;
 }
 
-/* line 8, ../sass/screen.scss */
+@font-face {
+  font-family: 'tf2secondary';
+  src: url("/css/fonts/tf2secondary.eot");
+  src: url("/css/fonts/tf2secondary.eot?#iefix") format("embedded-opentype"), url("/css/fonts/tf2secondary.woff2") format("woff2"), url("/css/fonts/tf2secondary.woff") format("woff"), url("/css/fonts/tf2secondary.ttf") format("truetype"), url("/css/fonts/tf2secondary.svg#tf2secondary") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 14, ../sass/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/* line 3, ../sass/partials/_layout.scss */
+html {
+  height: 100%;
+}
+
+/* line 7, ../sass/partials/_layout.scss */
 body {
-  color: red;
+  height: 100%;
+  background: #1a1a1a;
+  font-family: tf2secondary, sans-serif;
+  color: #beb6ac;
+}
+
+/* line 14, ../sass/partials/_layout.scss */
+.tf-container {
+  overflow: hidden;
+  *zoom: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* line 23, ../sass/partials/_layout.scss */
+.tf-container-body {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+}
+
+/* line 29, ../sass/partials/_layout.scss */
+.site-header {
+  background: #2a2621;
+  border: 1px solid #534a41;
+  padding: 10px 0 5px;
+}
+
+/* line 35, ../sass/partials/_layout.scss */
+.site-heading {
+  text-align: center;
+  font-size: 48px;
+  margin: 0;
+  color: #c13f3f;
+}
+
+/* line 42, ../sass/partials/_layout.scss */
+.tf-navigation {
+  float: left;
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 35%;
+  background: #3c362f;
+  border: solid #534a41;
+  border-width: 0 1px;
+  flex-grow: 1;
+}
+
+/* line 56, ../sass/partials/_layout.scss */
+.tf-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 65%;
+  margin-left: 10px;
+}
+
+/* line 66, ../sass/partials/_layout.scss */
+.tf-content-heading {
+  background: #bb5616;
+  padding: 5px 5px 3px 5px;
+  margin: 0 0 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* line 74, ../sass/partials/_layout.scss */
+.tf-content-body {
+  float: right;
+  flex-grow: 1;
+}
+
+/* line 3, ../sass/partials/_forms.scss */
+input, button, select {
+  background: #2a2621;
+  border: 1px solid #534a41;
+  padding: 7px 5px 5px 5px;
+  transition: all ease 0.2s;
+}
+
+/* line 11, ../sass/partials/_forms.scss */
+input:hover, input:focus, select:hover, select:focus {
+  background: #403325;
+  border-color: #614b32;
+}
+
+/* line 19, ../sass/partials/_forms.scss */
+input[type="text"]:focus {
+  background: #30261b;
+  -moz-box-shadow: 0 0 3px 3px rgba(119, 77, 28, 0.75);
+  -webkit-box-shadow: 0 0 3px 3px rgba(119, 77, 28, 0.75);
+  box-shadow: 0 0 3px 3px rgba(119, 77, 28, 0.75);
+}
+
+/* line 26, ../sass/partials/_forms.scss */
+.tf-btn-primary {
+  background: #bb5616;
+  border-color: #bb5616;
+}
+/* line 30, ../sass/partials/_forms.scss */
+.tf-btn-primary:hover {
+  background: #a84d14;
+}
+/* line 34, ../sass/partials/_forms.scss */
+.tf-btn-primary:active {
+  background: #964512;
+}
+
+/* line 3, ../sass/partials/_nav.scss */
+.tf-filter {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* line 9, ../sass/partials/_nav.scss */
+.tf-filters .tf-filter {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+/* line 14, ../sass/partials/_nav.scss */
+.tf-filters .tf-filter:last-child {
+  margin-bottom: 0;
+}
+
+/* line 24, ../sass/partials/_nav.scss */
+.tf-welcome {
+  font-size: 20px;
+  margin: 7px 0 15px;
+}
+
+/* line 3, ../sass/partials/_items.scss */
+.tf-item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+/* line 10, ../sass/partials/_items.scss */
+.tf-item {
+  background: #3c362f;
+  border: 1px solid #4c443b;
+  margin-bottom: 10px;
+}
+
+/* line 16, ../sass/partials/_items.scss */
+.tf-item-name {
+  display: block;
+  color: #ffd800;
+  background: #2a2621;
+  margin: 0;
+  padding: 7px 5px 5px;
+  font-size: 120%;
+  text-align: center;
+}
+
+/* line 27, ../sass/partials/_items.scss */
+.tf-item-content {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 10px 10px 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* line 38, ../sass/partials/_items.scss */
+.tf-item-info {
+  float: left;
+  text-align: center;
+}
+
+/* line 47, ../sass/partials/_items.scss */
+.tf-item-stats {
+  list-style: none;
+  padding: 0 5px;
+  margin: 0;
+  float: right;
+}
+
+/* line 54, ../sass/partials/_items.scss */
+.tf-stat {
+  color: #c6bea9;
+}
+
+/* line 58, ../sass/partials/_items.scss */
+.tf-stat-pos {
+  color: #99ccff;
+}
+
+/* line 62, ../sass/partials/_items.scss */
+.tf-stat-neg {
+  color: #d63a39;
 }

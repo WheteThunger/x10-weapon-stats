@@ -1,0 +1,33 @@
+@import '_base';
+
+.tf-filter {
+  @include box-sizing(border-box);
+  width: 100%;
+}
+
+.tf-filters {
+  .tf-filter {
+
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tf-show-equipped {
+
+}
+
+.tf-welcome {
+  font-size: 20px;
+  margin: 7px 0 15px;
+}
+
+.tf-search {
+  &:focus {
+
+  }
+}

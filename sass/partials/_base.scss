@@ -1,0 +1,40 @@
+
+@import 'compass';
+
+$item-level: #756b5e;
+$item-bg: #3c362f;
+$item-name: #ffd800;
+$item-positive: #99ccff;
+$item-negative: #d63a39;
+$item-neutral: #c6bea9;
+
+$main-bg: #1a1a1a;
+
+$rxg-red: #c13f3f;
+$tf2-orange: #bb5616;
+
+$border-color: scale_lightness($item-bg, 10);
+
+$item-name-bg: scale_lightness($item-bg, -30);
+$item-border: scale_lightness($item-bg, 7);
+
+$control-bg: $item-name-bg;
+$control-bg-focus: saturate($control-bg, 15);
+$control-bg-hover: lighten($control-bg-focus, 5);
+$control-border: $border-color;
+$control-border-focus: saturate($control-border, 20);
+
+$input-shadow-focus: rgba(saturate($border-color, 50), 0.75);
+
+$header-bg: $item-name-bg;
+$header-border: $border-color;
+
+$nav-bg: $item-bg;
+$nav-border: $border-color;
+
+$content-heading-bg: $tf2-orange;
+$content-bg: $main-bg;
+
+$text-color: adjust_lightness($item-bg, 50);
+
+$search-border: scale_lightness($border-color, 10);

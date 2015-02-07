@@ -1,0 +1,37 @@
+@import '_base';
+
+input, button, select {
+  background: $control-bg;
+  border: 1px solid $control-border;
+  padding: 7px 5px 5px 5px;
+  transition: all ease 0.2s;
+}
+
+input, select {
+  &:hover,
+  &:focus {
+    background: $control-bg-hover;
+    border-color: $control-border-focus;
+  }
+}
+
+input[type="text"] {
+  &:focus {
+    background: $control-bg-focus;
+    @include box-shadow(0 0 3px 3px $input-shadow-focus);
+//    @include box-shadow(0 0 3px 3px scale-lightness($control-bg-hover, -10) inset, 0 0 3px 3px scale-lightness($control-bg-hover, -10));
+  }
+}
+
+.tf-btn-primary {
+  background: $tf2-orange;
+  border-color: $tf2-orange;
+
+  &:hover {
+    background: scale-lightness($tf2-orange, -10);
+  }
+
+  &:active {
+    background: scale-lightness($tf2-orange, -20);
+  }
+}
