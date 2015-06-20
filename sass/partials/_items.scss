@@ -1,19 +1,20 @@
 @import '_base';
 
-.tf-item-list {
+.item-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: block;
 }
 
-.tf-item {
+.item {
+  display: block;
   background: $item-bg;
   border: 1px solid $item-border;
   margin-bottom: 10px;
 }
 
-.tf-item-name {
+.item-name {
   display: block;
   color: $item-name;
 
@@ -24,41 +25,45 @@
   text-align: center;
 }
 
-.tf-item-content {
+.item-content {
 
   @include clearfix();
 
-  padding: 10px 10px 10px 0;
+  padding: 0;
 
   display: flex;
+  flex-direction: row;
+
   align-items: center;
 
 }
 
-.tf-item-info {
-  float: left;
+.item-info {
+  flex-shrink: 0;
   text-align: center;
+  width: 100px;
+  height: 100px;
 }
 
-.tf-item-img {
-
+.item-img {
+  width: 100px;
+  height: 100px;
 }
 
-.tf-item-stats {
+.item-stats {
   list-style: none;
-  padding: 0 5px;
+  padding: 0 5px 0 10px;
   margin: 0;
-  float: right;
 }
 
-.tf-stat {
+.stat {
   color: $item-neutral;
 }
 
-.tf-stat-pos {
+.stat-pos {
   color: $item-positive;
 }
 
-.tf-stat-neg {
+.stat-neg {
   color: $item-negative;
 }

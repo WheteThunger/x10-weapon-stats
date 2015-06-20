@@ -296,9 +296,7 @@ body {
 }
 
 /* line 14, ../sass/partials/_layout.scss */
-.tf-container {
-  overflow: hidden;
-  *zoom: 1;
+.container {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -306,15 +304,16 @@ body {
   margin: 0 auto;
 }
 
-/* line 23, ../sass/partials/_layout.scss */
-.tf-container-body {
+/* line 22, ../sass/partials/_layout.scss */
+.container-body {
   display: flex;
   flex-grow: 1;
   flex-direction: row;
 }
 
-/* line 29, ../sass/partials/_layout.scss */
+/* line 28, ../sass/partials/_layout.scss */
 .site-header {
+  flex-shrink: 0;
   background: #2a2621;
   border: 1px solid #534a41;
   padding: 10px 0 5px;
@@ -329,7 +328,7 @@ body {
 }
 
 /* line 42, ../sass/partials/_layout.scss */
-.tf-navigation {
+.navigation {
   float: left;
   padding: 10px;
   -moz-box-sizing: border-box;
@@ -343,7 +342,7 @@ body {
 }
 
 /* line 56, ../sass/partials/_layout.scss */
-.tf-content {
+.content {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -355,7 +354,8 @@ body {
 }
 
 /* line 66, ../sass/partials/_layout.scss */
-.tf-content-heading {
+.content-heading {
+  flex-shrink: 0;
   background: #bb5616;
   padding: 5px 5px 3px 5px;
   margin: 0 0 10px;
@@ -363,27 +363,28 @@ body {
   text-align: center;
 }
 
-/* line 74, ../sass/partials/_layout.scss */
-.tf-content-body {
-  float: right;
+/* line 75, ../sass/partials/_layout.scss */
+.content-body {
   flex-grow: 1;
+  overflow-y: scroll;
 }
 
 /* line 3, ../sass/partials/_forms.scss */
 input, button, select {
+  outline: none;
   background: #2a2621;
   border: 1px solid #534a41;
   padding: 7px 5px 5px 5px;
   transition: all ease 0.2s;
 }
 
-/* line 11, ../sass/partials/_forms.scss */
+/* line 12, ../sass/partials/_forms.scss */
 input:hover, input:focus, select:hover, select:focus {
   background: #403325;
   border-color: #614b32;
 }
 
-/* line 19, ../sass/partials/_forms.scss */
+/* line 20, ../sass/partials/_forms.scss */
 input[type="text"]:focus {
   background: #30261b;
   -moz-box-shadow: 0 0 3px 3px rgba(119, 77, 28, 0.75);
@@ -391,22 +392,22 @@ input[type="text"]:focus {
   box-shadow: 0 0 3px 3px rgba(119, 77, 28, 0.75);
 }
 
-/* line 26, ../sass/partials/_forms.scss */
-.tf-btn-primary {
+/* line 27, ../sass/partials/_forms.scss */
+.btn-primary {
   background: #bb5616;
   border-color: #bb5616;
 }
-/* line 30, ../sass/partials/_forms.scss */
-.tf-btn-primary:hover {
+/* line 31, ../sass/partials/_forms.scss */
+.btn-primary:hover {
   background: #a84d14;
 }
-/* line 34, ../sass/partials/_forms.scss */
-.tf-btn-primary:active {
+/* line 35, ../sass/partials/_forms.scss */
+.btn-primary:active {
   background: #964512;
 }
 
 /* line 3, ../sass/partials/_nav.scss */
-.tf-filter {
+.filter {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -414,23 +415,23 @@ input[type="text"]:focus {
 }
 
 /* line 9, ../sass/partials/_nav.scss */
-.tf-filters .tf-filter {
+.filters .filter {
   font-size: 18px;
   margin-bottom: 10px;
 }
 /* line 14, ../sass/partials/_nav.scss */
-.tf-filters .tf-filter:last-child {
+.filters .filter:last-child {
   margin-bottom: 0;
 }
 
 /* line 24, ../sass/partials/_nav.scss */
-.tf-welcome {
+.welcome {
   font-size: 20px;
   margin: 7px 0 15px;
 }
 
 /* line 3, ../sass/partials/_items.scss */
-.tf-item-list {
+.item-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -438,14 +439,15 @@ input[type="text"]:focus {
 }
 
 /* line 10, ../sass/partials/_items.scss */
-.tf-item {
+.item {
+  display: block;
   background: #3c362f;
   border: 1px solid #4c443b;
   margin-bottom: 10px;
 }
 
-/* line 16, ../sass/partials/_items.scss */
-.tf-item-name {
+/* line 17, ../sass/partials/_items.scss */
+.item-name {
   display: block;
   color: #ffd800;
   background: #2a2621;
@@ -455,40 +457,48 @@ input[type="text"]:focus {
   text-align: center;
 }
 
-/* line 27, ../sass/partials/_items.scss */
-.tf-item-content {
+/* line 28, ../sass/partials/_items.scss */
+.item-content {
   overflow: hidden;
   *zoom: 1;
-  padding: 10px 10px 10px 0;
+  padding: 0;
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
-/* line 38, ../sass/partials/_items.scss */
-.tf-item-info {
-  float: left;
+/* line 41, ../sass/partials/_items.scss */
+.item-info {
+  flex-shrink: 0;
   text-align: center;
+  width: 100px;
+  height: 100px;
 }
 
-/* line 47, ../sass/partials/_items.scss */
-.tf-item-stats {
+/* line 48, ../sass/partials/_items.scss */
+.item-img {
+  width: 100px;
+  height: 100px;
+}
+
+/* line 53, ../sass/partials/_items.scss */
+.item-stats {
   list-style: none;
-  padding: 0 5px;
+  padding: 0 5px 0 10px;
   margin: 0;
-  float: right;
 }
 
-/* line 54, ../sass/partials/_items.scss */
-.tf-stat {
+/* line 59, ../sass/partials/_items.scss */
+.stat {
   color: #c6bea9;
 }
 
-/* line 58, ../sass/partials/_items.scss */
-.tf-stat-pos {
+/* line 63, ../sass/partials/_items.scss */
+.stat-pos {
   color: #99ccff;
 }
 
-/* line 62, ../sass/partials/_items.scss */
-.tf-stat-neg {
+/* line 67, ../sass/partials/_items.scss */
+.stat-neg {
   color: #d63a39;
 }

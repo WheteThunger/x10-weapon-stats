@@ -1,0 +1,39 @@
+
+<nav>
+
+    <button type="button" class="filter btn-primary show-equipped">View Equipped Items</button>
+
+    <select class="server filter">
+        <option>Master Config</option>
+        <option>x10 Mayhem Server</option>
+        <option>x10 Blackmesa Server</option>
+    </select>
+
+    <select class="group filter">
+        <option>Applies to Everybody</option>
+        <option>Applies to Testers</option>
+    </select>
+
+    <select class="class filter">
+        <option>All classes</option>
+        <option>Soldier</option>
+        <option>Spy</option>
+        <option>Engineer</option>
+        <option>Sniper</option>
+        <option>Pyro</option>
+        <option>Scout</option>
+        <option>Medic</option>
+        <option>Heavy</option>
+        <option>Demoman</option>
+    </select>
+
+    <input type="text" class="search filter" placeholder="Search items..."
+           ng-model="searchTerm" ng-keyup="searchCtrl.search()">
+
+    <p class="welcome">
+        Welcome to the RXG x10 Item Stats App! Here you can browse the customized stats for all our x10 servers.
+    </p>
+
+    <button type="button" class="filter btn-primary add-item">+Add New Item</button>
+
+</nav>

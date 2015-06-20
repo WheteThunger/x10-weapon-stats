@@ -1,0 +1,18 @@
+
+<header class="site-header">
+    <h1 class="site-heading">RXG x10 Item Stats</h1>
+</header>
+
+<section class="container-body" ng-controller="MainController as main">
+
+    <search class="navigation filters" search-term="main.searchTerm"></search>
+
+    <main class="content">
+
+        <h2 class="content-heading" ng-if="true">Showing Equipped Items</h2>
+        <h2 class="content-heading" ng-if="main.searchTerm">Viewing search results for '{{ main.searchTerm }}'</h2>
+
+        <item-list class="content-body" search-term="main.searchTerm"></item-list>
+    </main>
+
+</section>

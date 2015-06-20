@@ -1,12 +1,12 @@
 @import '_base';
 
-.tf-filter {
+.filter {
   @include box-sizing(border-box);
   width: 100%;
 }
 
-.tf-filters {
-  .tf-filter {
+.filters {
+  .filter {
 
     font-size: 18px;
     margin-bottom: 10px;
@@ -17,16 +17,16 @@
   }
 }
 
-.tf-show-equipped {
+.show-equipped {
 
 }
 
-.tf-welcome {
+.welcome {
   font-size: 20px;
   margin: 7px 0 15px;
 }
 
-.tf-search {
+.search {
   &:focus {
 
   }

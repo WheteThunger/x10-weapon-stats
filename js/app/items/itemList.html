@@ -1,0 +1,17 @@
+
+<ul class="item-list">
+    <li class="item" ng-repeat="item in itemsCtrl.items | itemFilter:searchTerm">
+        <h3 class="item-name">{{ item.name }}</h3>
+        <div class="item-content">
+            <div class="item-info">
+                <img src="{{ item.imgUrl }}" class="item-img">
+            </div>
+            <ul class="item-stats">
+                <li ng-repeat="attribute in item.attributes"
+                    class="stat stat-{{ attribute.effect_type.slice(0,3) }}">
+                    {{ attribute | attrDescription }}
+                </li>
+            </ul>
+        </div>
+    </li>
+</ul>

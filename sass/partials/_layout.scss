@@ -11,8 +11,7 @@ body {
   color: $text-color;
 }
 
-.tf-container {
-  @include clearfix();
+.container {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -20,13 +19,14 @@ body {
   margin: 0 auto;
 }
 
-.tf-container-body {
+.container-body {
   display: flex;
   flex-grow: 1;
   flex-direction: row;
 }
 
 .site-header {
+  flex-shrink: 0;
   background: $header-bg;
   border: 1px solid $header-border;
   padding: 10px 0 5px;
@@ -39,7 +39,7 @@ body {
   color: $rxg-red;
 }
 
-.tf-navigation {
+.navigation {
   float: left;
   padding: 10px;
 
@@ -53,7 +53,7 @@ body {
   flex-grow: 1;
 }
 
-.tf-content {
+.content {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -63,7 +63,8 @@ body {
   margin-left: 10px;
 }
 
-.tf-content-heading {
+.content-heading {
+  flex-shrink: 0;
   background: $content-heading-bg;
   padding: 5px 5px 3px 5px;
   margin: 0 0 10px;
@@ -71,8 +72,8 @@ body {
   text-align: center;
 }
 
-.tf-content-body {
-  float: right;
+.content-body {
+//  float: right;
   flex-grow: 1;
-  //  overflow-y: scroll;
+    overflow-y: scroll;
 }
